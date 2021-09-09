@@ -164,7 +164,7 @@ public final class MDMConfiguration {
 				AESEncryption encryption = AESEncryption.getInstance();
                 config.setProperty(ADMIN_PASSWORD, config.getString(ADMIN_PASSWORD));
                 config.setProperty(TECHNICAL_PASSWORD, config.getString(TECHNICAL_PASSWORD));
-                config.setProperty(TDS_PASSWORD,  config.getString(TDS_PASSWORD)));
+                config.setProperty(TDS_PASSWORD,  config.getString(TDS_PASSWORD));
                 config.setProperty(HZ_GROUP_PASSWORD,config.getString(HZ_GROUP_PASSWORD));
                 config.setProperty(SCIM_PASSWORD,  config.getString(SCIM_PASSWORD));
                 properties = ConfigurationConverter.getProperties(config);
