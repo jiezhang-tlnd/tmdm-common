@@ -162,11 +162,11 @@ public final class MDMConfiguration {
                 config.load(file);
                 // Decrypt the passwords in mdm.conf
 				AESEncryption encryption = AESEncryption.getInstance();
-                config.setProperty(ADMIN_PASSWORD, encryption.decrypt(ADMIN_PASSWORD, config.getString(ADMIN_PASSWORD)));
-                config.setProperty(TECHNICAL_PASSWORD, encryption.decrypt(TECHNICAL_PASSWORD, config.getString(TECHNICAL_PASSWORD)));
-                config.setProperty(TDS_PASSWORD, encryption.decrypt(TDS_PASSWORD, config.getString(TDS_PASSWORD)));
-                config.setProperty(HZ_GROUP_PASSWORD,encryption.decrypt(HZ_GROUP_PASSWORD, config.getString(HZ_GROUP_PASSWORD)));
-                config.setProperty(SCIM_PASSWORD, encryption.decrypt(SCIM_PASSWORD, config.getString(SCIM_PASSWORD)));
+                config.setProperty(ADMIN_PASSWORD, config.getString(ADMIN_PASSWORD));
+                config.setProperty(TECHNICAL_PASSWORD, config.getString(TECHNICAL_PASSWORD));
+                config.setProperty(TDS_PASSWORD,  config.getString(TDS_PASSWORD)));
+                config.setProperty(HZ_GROUP_PASSWORD,config.getString(HZ_GROUP_PASSWORD));
+                config.setProperty(SCIM_PASSWORD,  config.getString(SCIM_PASSWORD));
                 properties = ConfigurationConverter.getProperties(config);
             } catch (Exception e) {
                 if (!ignoreIfNotFound) {
