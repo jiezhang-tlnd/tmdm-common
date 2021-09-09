@@ -161,7 +161,7 @@ public final class MDMConfiguration {
                 config.setEncoding(StandardCharsets.UTF_8.name());
                 config.load(file);
                 // Decrypt the passwords in mdm.conf
-				AESEncryption encryption = AESEncryption.getInstance();
+                // AESEncryption encryption = AESEncryption.getInstance();
                 config.setProperty(ADMIN_PASSWORD, config.getString(ADMIN_PASSWORD));
                 config.setProperty(TECHNICAL_PASSWORD, config.getString(TECHNICAL_PASSWORD));
                 config.setProperty(TDS_PASSWORD,  config.getString(TDS_PASSWORD));
