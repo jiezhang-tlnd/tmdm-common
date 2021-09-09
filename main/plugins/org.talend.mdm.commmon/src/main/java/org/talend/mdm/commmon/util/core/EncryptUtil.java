@@ -65,13 +65,13 @@ public class EncryptUtil {
         propertiesFileMap.put("mdm.conf", mdmProperties); //$NON-NLS-1$
 
         Iterator it = propertiesFileMap.entrySet().iterator();
-        while (it.hasNext()) {
+        /*while (it.hasNext()) {
             Map.Entry<String, String[]> entry = (Entry<String, String[]>) it.next();
             encryptProperties(path + entry.getKey(), entry.getValue());
         }
-
+        
         encyptXML(path + "datasources.xml"); //$NON-NLS-1$
-        return true;
+        */ return true;
     }
 
     public static void encryptProperties(String location, String[] properties) throws Exception {
