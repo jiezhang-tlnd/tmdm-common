@@ -49,11 +49,11 @@ public class EncryptUtil {
         if (args.length < 1) {
             return;
         }
-        String keyfile = System.getProperty(AESEncryption.KEYS_FILE);		 
+        /*String keyfile = System.getProperty(AESEncryption.KEYS_FILE);		 
         if (StringUtils.isEmpty(keyfile)) {
             System.setProperty(AESEncryption.KEYS_FILE, args[0] + "aeskey.dat");
         }
-        encrypt(args[0]);
+        encrypt(args[0]);*/
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -90,7 +90,7 @@ public class EncryptUtil {
                 for (String property : properties) {
                     String password = config.getString(property);
                     if (StringUtils.isNotEmpty(password)) {                     	
-						config.setProperty(property, AESEncryption.getInstance().reEncrypt(property, password));
+                        // config.setProperty(property, AESEncryption.getInstance().reEncrypt(property, password));
                         updated = true;
                     }
                 }
@@ -141,7 +141,7 @@ public class EncryptUtil {
     private static void encryptByXpath(HierarchicalConfiguration config, String xpath) throws Exception {
         String password = config.getString(xpath);
         if (StringUtils.isNotEmpty(password)) {     	
-			config.setProperty(xpath, AESEncryption.getInstance().reEncrypt(xpath, password));
+            // config.setProperty(xpath, AESEncryption.getInstance().reEncrypt(xpath, password));
             updated = true;
         }
     }

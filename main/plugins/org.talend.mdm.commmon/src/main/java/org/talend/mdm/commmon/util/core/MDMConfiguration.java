@@ -19,7 +19,6 @@ import org.apache.commons.configuration.ConfigurationConverter;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.talend.mdm.commmon.util.core.AESEncryption;
 
 /**
  * Handles the mdm.conf file
